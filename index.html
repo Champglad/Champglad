@@ -1,9 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Champglad Technology Limited offers professional ICT services including computer repairs, network setup, and more. Based in Lagos, Nigeria.">
+  <meta name="keywords" content="ICT services, computer repair, network setup, Lagos IT company">
+  <meta name="author" content="Champglad Technology Limited">
+  <link rel="canonical" href="https://yourwebsite.com/"> 
   <title>Champglad Technology Limited</title>
   <style>
     body {
@@ -34,114 +38,223 @@
       background: url('https://via.placeholder.com/1200x400?text=ICT+Solutions+for+Business') no-repeat center center/cover;
       height: 300px;
       color: white;
-      text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 2em;
       font-weight: bold;
     }
-    <!-- ======= Services Section ======= -->
-<section id="services" style="padding: 40px 0;">
-  <div class="container">
-    <h2 style="text-align: center; margin-bottom: 30px;">Our Services</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-      <!-- Service 1 -->
-      <div class="service-card" onclick="window.location.href='#computer-repairs'" 
-           style="border: 1px solid #e0e0e0; padding: 25px; border-radius: 5px; transition: all 0.3s ease; cursor: pointer;">
-        <h3 style="color: #2c3e50;">Computer Repairs</h3>
-        <p style="color: #666;">Motherboard-level servicing for laptops and desktops</p>
-        <button style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 3px; margin-top: 10px;">
-          Learn More →
-        </button>
+    section#services { 
+      padding: 40px 0;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      border: 1px solid #e0e0e0;
+      padding: 25px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .service-card h3 {
+      color: #2c3e50;
+    }
+    .service-card p {
+      color: #666;
+    }
+    .service-card button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 3px;
+      margin-top: 10px;
+    }
+    section#about {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section#contact {
+      padding: 40px 0;
+      background: #f9f9f9;
+    }
+    form {
+      padding: 20px;
+      border-radius: 5px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-control {
+      margin-bottom: 15px;
+    }
+    .form-control label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    textarea {
+      min-height: 120px;
+    }
+    form button {
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .contact-info {
+      margin-top: 30px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+    }
+    /* Chat button customization (if needed) */
+    .tawk-button {
+      background: #e74c3c !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Champglad Technology Limited</h1>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">Empowering Businesses with Technology</div>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <!-- Service 1 -->
+        <div class="service-card" data-target="#computer-repairs">
+          <h3>Computer Repairs</h3>
+          <p>Motherboard-level servicing for laptops and desktops</p>
+          <button>Learn More →</button>
+        </div>
+        <!-- Service 2 -->
+        <div class="service-card" data-target="#network-setup">
+          <h3>Network Setup</h3>
+          <p>Office WiFi and printer configuration</p>
+          <button>Learn More →</button>
+        </div>
+        <!-- Add more service cards as needed -->
       </div>
-      
-      <!-- Service 2 -->
-      <div class="service-card" onclick="window.location.href='#network-setup'"
-           style="border: 1px solid #e0e0e0; padding: 25px; border-radius: 5px; transition: all 0.3s ease; cursor: pointer;">
-        <h3 style="color: #2c3e50;">Network Setup</h3>
-        <p style="color: #666;">Office WiFi and printer configuration</p>
-        <button style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 3px; margin-top: 10px;">
-          Learn More →
-        </button>
-      </div>
-      
-      <!-- Add 4 more services following the same pattern -->
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-// Add smooth scrolling to service links
-document.querySelectorAll('.service-card').forEach(card => {
-  card.addEventListener('click', function() {
-    const targetId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
-    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-  });
-});
-</script>
+  <!-- Anchor Sections for Smooth Scroll -->
+  <section id="computer-repairs">
+    <div class="container">
+      <h3>Computer Repairs</h3>
+      <p>Motherboard-level servicing for laptops and desktops.</p>
+    </div>
+  </section>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Champglad Technology Limited is a CAC-registered company (RC: 1530856) based in Computer Village, Ikeja, Lagos. We specialize in delivering reliable, affordable, and professional ICT services for schools, businesses, and organizations across Nigeria.</p>
-    </section>
+  <section id="network-setup">
+    <div class="container">
+      <h3>Network Setup</h3>
+      <p>Office WiFi and printer configuration services.</p>
+    </div>
+  </section>
 
-    <!-- ======= Contact Section ======= -->
-<section id="contact" style="padding: 40px 0; background: #f9f9f9;">
-  <div class="container">
-    <h2 style="text-align: center; margin-bottom: 30px;">Contact Us</h2>
-    
-    <div style="max-width: 600px; margin: 0 auto;">
-      <form action="https://formspree.io/f/champglad@gmail.com" method="POST" style="padding: 20px; border-radius: 5px; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-        <div style="margin-bottom: 15px;">
-          <label style="display: block; margin-bottom: 5px;">Your Name</label>
-          <input type="text" name="name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" required>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Champglad Technology Limited is a CAC-registered company (RC: 1530856) based in Computer Village, Ikeja, Lagos. We specialize in delivering reliable, affordable, and professional ICT services for schools, businesses, and organizations across Nigeria.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/champglad@gmail.com"  method="POST">
+        <div class="form-control">
+          <label>Your Name</label>
+          <input type="text" name="name" required>
         </div>
-        
-        <div style="margin-bottom: 15px;">
-          <label style="display: block; margin-bottom: 5px;">Your Email</label>
-          <input type="email" name="email" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" required>
+        <div class="form-control">
+          <label>Your Email</label>
+          <input type="email" name="email" required>
         </div>
-        
-        <div style="margin-bottom: 15px;">
-          <label style="display: block; margin-bottom: 5px;">Message</label>
-          <textarea name="message" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; min-height: 120px;" required></textarea>
+        <div class="form-control">
+          <label>Message</label>
+          <textarea name="message" required></textarea>
         </div>
-        
-        <button type="submit" style="background: #e74c3c; color: white; border: none; padding: 12px 25px; border-radius: 4px; cursor: pointer; font-size: 16px;">Send Message</button>
+        <div style="text-align: center;">
+          <button type="submit">Send Message</button>
+        </div>
       </form>
-      
-      <div style="margin-top: 30px; text-align: center;">
+      <div class="contact-info">
         <p><strong>Or reach us directly:</strong></p>
         <p>📧 champglad@gmail.com | 📞 07066193090</p>
         <p>📍 8 Ola Ayeni Street, Computer Village, Ikeja, Lagos</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Champglad Technology Limited. All rights reserved.</p>
+    <script>
+      document.write('&copy; ' + new Date().getFullYear() + ' Champglad Technology Limited. All rights reserved.');
+    </script>
   </footer>
 
-    <!-- ======= Live Chat ======= -->
-<script>
-  // Tawk.to widget (replace with your actual widget ID)
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6655f2ec9a809f19fb2f2d4f/1hv0d1v4h';
-    s0.parentNode.insertBefore(s1,s0);
-  })();
-</script>
+  <!-- Live Chat - Tawk.to -->
+  <script>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/6655f2ec9a809f19fb2f2d4f/1hv0d1v4h'; 
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
 
-<style>
-  /* Chat button customization */
-  .tawk-button {
-    background: #e74c3c !important;
-  }
-</style>
+  <!-- Smooth Scrolling Script -->
+  <script>
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
